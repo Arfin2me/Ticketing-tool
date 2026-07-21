@@ -1,0 +1,13 @@
+#nav__Menu {
+  margin-top: 2%;
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+}
+
+#nav__Dropbox {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 1%;
+}

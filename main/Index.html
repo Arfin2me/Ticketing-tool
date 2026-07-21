@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!-- Changed: the root element must be <html>, and lang belongs on this element. -->
+<html lang="en">
+
+<head>
+  <!-- Changed: charset and viewport are separate meta tags for valid document metadata. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Learning Project</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+
+<body>
+  <div id="nav__Menu">
+    <!-- Navigation dropdown/list: groups all main menu buttons. -->
+    <div id="nav__Dropbox">
+      <!-- Changed: navigation ids now use readable case names instead of old short ticket abbreviations. -->
+      <button id="nav__Btn--createCase" class="btn" type="button">Create New Case</button>
+      <button id="nav__Btn--allCases" class="btn" type="button">All Cases</button>
+      <button id="nav__Btn--allRequests" class="btn" type="button">All Requests</button>
+      <button id="nav__Btn--newCases" class="btn" type="button">New Cases</button>
+      <button id="nav__Btn--newRequests" class="btn" type="button">New Requests</button>
+      <button id="nav__Btn--kb" class="btn" type="button">Knowledge</button>
+      <button id="nav__Btn--ticketsAssigned" class="btn" type="button">Assigned Tickets</button>
+      <button id="nav__Btn--caseManagement" class="btn" type="button">Case Management</button>
+      <button id="nav__Btn--requestManagement" class="btn" type="button">Request Management</button>
+      <button id="nav__Btn--qualityManagement" class="btn" type="button">Quality Management</button>
+    </div>
+
+  </div>
+  <!-- Changed: all visible page content must be inside the body element. -->
+  <!-- Page wrapper: holds the whole visible application. -->
+
+  <!-- Changed: renamed the old ticket wording to case wording so the app language stays consistent. -->
+  <!-- Main app container: contains login, navigation menu, and case workspace. -->
+  <!-- Login area: contains the hidden/shown login box. -->
+  <div id="login__container">
+    <!-- Login box: visual frame around the login form. -->
+    <div id="login__box">
+      <!-- Changed: the form now closes before the login box closes, so the nesting is valid. -->
+      <form id="login__Form">
+        <!-- Login form content wrapper: groups header, inputs, and buttons. -->
+        <div id="login__Box--Container">
+          <!-- Login header: displays the welcome title. -->
+          <div id="login__Header">
+            <h1 id="login__Header--Text">Welcome!</h1>
+          </div>
+          <!-- Login inputs: username and password fields. -->
+          <div id="login__Inputs">
+            <input id="login__userName" class="login__" type="text" placeholder="User Name">
+            <input id="login__Password" type="password" placeholder="Password">
+          </div>
+          <!-- Login buttons: sign up, submit, and password reset actions. -->
+          <div id="login__Btns">
+            <button id="login__Btn--SignUp" class="btn" type="button">Sign Up</button>
+            <!-- Existing user buttons: actions for users who already have an account. -->
+            <div id="login__Btn--OldUser">
+              <button id="login__Btn" class="btn" type="submit">Submit</button>
+              <button id="login__Btn--Reset" class="btn" type="button">Forgot password</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main navigation menu: contains buttons for switching between app areas. -->
+
+  <!-- Body container: holds the main working area of the application. -->
+  <div id="container__Body">
+    <!-- Changed: create case screen ids/classes now match the visible Case wording. -->
+    <!-- Create case screen: contains the full case form and interaction panels. -->
+    <div id="createCase">
+
+      <!-- Case details container: groups top action buttons, case fields, and caller info. -->
+      <div id="createCase__Container">
+        <!-- Workspace actions: buttons for saving or changing case state. -->
+
+        <div id="workspace__Actions">
+          <button id="workspace__Btn--SaveChanges" class="btn" type="button">Submit Changes</button>
+          <button id="workspace__Btn--Discard" class="btn" type="button">Discard Changes</button>
+          <!-- Changed: removed the trailing space from the id so CSS/JavaScript can target it reliably. -->
+          <button id="workspace__Btn--Draft" class="btn" type="button">Save Draft</button>
+        </div>
+        <ul id="createCase__Box">
+          <li class="createCase__Details--Items">
+            <!-- Changed: case field ids use full words instead of the old short prefix. -->
+            <span id="caseState__Label">Case State:</span>
+            <span id="caseState__value">New</span>
+          </li>
+          <li class="createCase__Details--Items">
+            <span id="caseNumber__Label">Case Number:</span>
+            <span id="caseNumber__value">CS0000001</span>
+          </li>
+          <li class="createCase__Details--Items">
+            <span id="caseParent--Label">Parent Case:</span>
+            <input id="caseParent__Input" type="text" placeholder="Parent Case">
+          </li>
+          <li class="createCase__Details--Items">
+            <span id="casePriority__Label">Priority</span>
+            <span id="casePriority__Value"></span>
+          </li>
+          <li class="createCase__Details--Items">
+            <span id="caseUrgency__Label">Urgency</span>
+            <select id="caseUrgency__Options">
+              <option id="caseUrgency__Low--Option">Low</option>
+              <option id="caseUrgency__Medium--Option">Medium</option>
+              <option id="caseUrgency__High--Option">High</option>
+            </select>
+          </li>
+          <li class="createCase__Details--Items">
+            <span id="caseImpact__Label">Impact</span>
+            <select id="caseImpact__Options">
+              <option id="caseImpact__Low--Option">Low</option>
+              <option id="caseImpact__Medium--Option">Medium</option>
+              <option id="caseImpact__High--Option">High</option>
+            </select>
+          </li>
+        </ul>
+
+        <!-- Caller container: visual/layout wrapper for the caller fields list. -->
+        <ul id="caller__Box">
+          <li class="caller__Details--Items">
+            <label for="caller__Name--input" id="caller__Name--label">Caller's Name</label>
+            <input id="caller__Name--input" type="text" placeholder="Caller's Name">
+          </li>
+          <li class="caller__Details--Items">
+            <label for="caller__ID--input" id="caller__ID--label">Caller's ID</label>
+            <input id="caller__ID--input" type="text" placeholder="Caller's ID">
+          </li>
+          <li class="caller__Details--Items">
+            <span id="caller__Vip">VIP</span>
+          </li>
+          <li class="caller__Details--Items">
+            <label for="caller__Location--input" id="caller__Location--label">Location</label>
+            <input id="caller__Location--input" type="text" placeholder="Location">
+          </li>
+          <li class="caller__Details--Items">
+            <label for="caller__timeZone--input" id="caller__timeZone--label">Time Zone</label>
+            <input id="caller__timeZone--input" type="text" placeholder="Time Zone">
+          </li>
+          <li class="caller__Details--Items">
+            <label for="caller__CI--input" id="caller__CI--label">Configuration Item</label>
+            <input id="caller__CI--input" type="text" placeholder="Configuration Item">
+          </li>
+          <li class="caller__Details--Items">
+            <label for="caller__Type--input" id="caller__Type--label">Type</label>
+            <input id="caller__Type--input" type="text" placeholder="Type">
+          </li>
+          <li id="case__WorkedBefore" class="case__Item">
+            <!-- Changed: previous work ids make the yes/no buttons easier to understand. -->
+            <span id="casePreviousWork__Label">Worked Before? </span>
+            <div id="previousWork__Btns">
+              <button id="casePreviousWork__YesBtn" class="btn" type="button">Yes</button>
+              <button id="casePreviousWork__NoBtn" class="btn" type="button">No</button>
+            </div>
+          </li>
+          <li class="case__Item">
+            <!-- Changed: knowledge article ids no longer use the unclear KB abbreviation. -->
+            <label for="caseKnowledgeArticle__Input" id="caseKnowledgeArticle__Label">Knowledge Article</label>
+            <input id="caseKnowledgeArticle__Input" type="text" placeholder="KB number">
+          </li>
+          <li class="case__Item">
+            <!-- Changed: related ticket ids now use full words instead of the rel abbreviation. -->
+            <label for="caseRelatedTickets__Input" id="caseRelatedTickets__Label">Related Tickets</label>
+            <input id="caseRelatedTickets__Input" type="text" placeholder="Related Tickets">
+          </li>
+          <li class="case__Item">
+            <!-- Changed: case assignment ids now clearly show these fields belong to the case assignment section. -->
+            <label for="caseAssignmentGroup__Input" id="caseAssignmentGroup__Label">Assignment Group</label>
+            <input id="caseAssignmentGroup__Assign" type="text" placeholder="Assignment Group">
+          </li>
+          <li class="case__Item">
+            <!-- Changed: assignee ids describe the person assigned to the case. -->
+            <label for="caseAssignee__Input" id="caseAssignee__Label">Assigned To</label>
+            <input id="caseAssignee__Input" type="text" placeholder="Assigned To">
+          </li>
+        </ul>
+      </div>
+      <!-- Interactive container: holds workspace navigation, troubleshooting, and interaction logs. -->
+
+
+      <!-- Workspace fields container: holds description, assignment, knowledge, and related-ticket fields. -->
+      <section id="troubleshooting">
+        <ul id="interactive__Description--Box">
+          <li id="shortDescription__Box" class="workspace__Item">
+            <label for="shortDescription__Text" id="shortDescription__label">Short Description</label>
+            <textarea id="shortDescription__Text" name="shortDescription__Text" rows="1" cols="60"></textarea>
+          </li>
+          <li id="description__Box" class="workspace__Item">
+            <label for="description__Text" id="description__Label">Description</label>
+            <textarea id="description__Text" name="description" rows="5" cols="60"></textarea>
+          </li>
+        </ul>
+        <div id="troubleshooting__Container">
+          <!-- Workspace navigation: buttons for choosing the active lower workspace panel. -->
+          <!-- Interactive area: contains troubleshooting notes and user interaction sections. -->
+
+
+          <!-- Troubleshooting input box: form where troubleshooting notes are written. -->
+          <div id="troubleshooting__Box" class="workspace__Item">
+            <form id="troubleshooting__Form">
+              <div class="flex__left">
+                <label id="troubleshooting__Label" for="troubleshooting__Text">Troubleshooting</label>
+              </div>
+              <textarea id="troubleshooting__Text" name="troubleshooting__Text" rows="6" cols="60"></textarea>
+              <div class="flex__right">
+                <button id="troubleshooting__Btn" class="btn" type="submit">Submit</button>
+              </div>
+            </form>
+          </div>
+          <!-- Troubleshooting logs: list where submitted troubleshooting notes appear. -->
+          <div id="troubleshooting__Logs">
+            <div id="troubleshooting__Header--Box">
+              <h3 id="troubleshooting__Header">Troubleshooting Notes</h3>
+            </div>
+            <ul id="troubleshooting__List" class="flex-column-reverse" aria-live="polite">
+            </ul>
+          </div>
+        </div>
+      </section>
+      <div id="interaction__Box">
+        <form id="interaction__Form">
+          <label for="interaction__workNotes" id="interaction__workNotes--Label">Comment</label>
+          <textarea id="interaction__workNotes" name="interaction__workNotes" cols="30" rows="4"></textarea>
+          <label for="interaction__Messages" id="interaction__Messages--Label">Message</label>
+          <textarea id="interaction__Messages" name="interaction__Messages" cols="30" rows="4"></textarea>
+          <div id="interaction__Btn--Box">
+            <button id="interaction__Submit--Btn" class="btn" type="submit">Submit</button>
+          </div>
+        </form>
+
+        <!-- Interaction logs: contains both internal comments and external messages. -->
+        <div id="interaction__Logs">
+          <!-- Messages log: stores submitted messages. -->
+          <div id="messages">
+            <div id="message__Header--Box">
+              <h3 id="messages__Header">Interaction Logs</h3>
+            </div>
+            <!-- Changed: removed the extra quote from aria-live. -->
+            <ul id="messages__Logs" aria-live="polite">
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="workspace__Nav--Container">
+    <button id="nav__Btn--Troubleshooting" class="btn" type="button">Troubleshooting</button>
+    <button id="nav__Btn--Chat" class="btn" type="button">Chat</button>
+    <button id="nav__Btn--CallerInfo" class="btn" type="button">Caller Info</button>
+    <button id="nav__Btn--Attachments" class="btn" type="button">Attachments</button>
+    <button id="nav__Btn--Knowledge" class="btn" type="button">Knowledge</button>
+    <button id="nav__Btn--RelatedItems" class="btn" type="button">Related Records</button>
+  </div>
+
+  <!-- Changed: removed the leading space from the script path. -->
+  <script src="../JavaScript/main.js" defer></script>
+  <script src="../JavaScript/eventListeners.js" defer></script>
+</body>
+
+</html>
