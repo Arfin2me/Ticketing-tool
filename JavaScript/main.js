@@ -1,8 +1,8 @@
 function showContent() {
-    const credits = document.querySelectorAll("#nav__userName, #nav__Password");
-    const formStyle = document.getElementById("nav__Form").style;
+    const credits = document.querySelectorAll("#login__userName, #login__Password");
+    const formStyle = document.getElementById("login__Form").style;
     const menuStyle = document.getElementById("nav__Menu").style;
-    const welcomeStyle = document.getElementById("body__Header--Text").style;
+    const welcomeStyle = document.getElementById("login__Header--Text").style;
 
     if (credits[0].value === "" && credits[1].value === "") {
         menuStyle.display = "flex";
@@ -15,7 +15,7 @@ function showContent() {
 function showCreateCase() {
     const createCaseStyle = document.getElementById("createCase").style;
     const createCaseBtn = document.getElementById("nav__Btn--createCase");
-    const menuItems = document.querySelectorAll("#nav__Dropbox .btn__Menu");
+    const menuItems = document.querySelectorAll("#nav__Dropbox .btn");
     const isOpening = createCaseBtn.textContent === "Create New Case";
 
     createCaseStyle.display = (
@@ -36,7 +36,7 @@ function addTroubleshootingLog() {
     const logBox = document.getElementById("troubleshooting__List");
     const text = textBox.value.trim();
     const date = new Date().toLocaleString();
-    const div = document.createElement("div");
+    const list = document.createElement("li");
     const agent = document.createElement("h5");
     agent.textContent = `Updated by Agent`;
     if (!text) return;
@@ -46,67 +46,11 @@ function addTroubleshootingLog() {
     const newLog = document.createElement("li");
     newLog.textContent = text;
     newLog.classList.add("logs");
-    div.appendChild(agent);
-    div.appendChild(newDate);
-    div.appendChild(newLog);
-    logBox.appendChild(div);
+    list.appendChild(agent);
+    list.appendChild(newDate);
+    list.appendChild(newLog);
+    logBox.appendChild(list);
     textBox.value = "";
-}
-
-function showUrgencyList() {
-    // Changed: lookup ids use the readable case prefix used in the HTML.
-    const btn = document.getElementById("caseUrgency__Select--Btn");
-    const options = document.getElementById("caseUrgency__States");
-
-    btn.style.display = "none";
-    options.style.display = "flex";
-    options.style.flexDirection = "row";
-    options.style.justifyContent = "right";
-}
-
-function selectUrgency({
-    target
-}) {
-    // Changed: selection logic now reads from case urgency controls.
-    const btn = document.getElementById("caseUrgency__Select--Btn");
-    const options = document.getElementById("caseUrgency__States");
-
-    btn.textContent = target.textContent;
-    btn.style.display = "";
-    options.style.display = "none";
-
-    updatePriority();
-}
-
-function showOptions(buttonId, listId) {
-    document.getElementById(buttonId).style.display = "none";
-    document.getElementById(listId).style.display = "flex";
-}
-
-
-function showImpactList() {
-    // Changed: lookup ids use the readable case prefix used in the HTML.
-    const btn = document.getElementById("caseImpact__Select--Btn");
-    const options = document.getElementById("caseImpact__States");
-
-    btn.style.display = "none";
-    options.style.display = "flex";
-    options.style.flexDirection = "row";
-    options.style.justifyContent = "right";
-}
-
-function selectImpact({
-    target
-}) {
-    // Changed: selection logic now reads from case impact controls.
-    const btn = document.getElementById("caseImpact__Select--Btn");
-    const options = document.getElementById("caseImpact__States");
-
-    btn.textContent = target.textContent;
-    btn.style.display = "";
-    options.style.display = "none";
-
-    updatePriority();
 }
 
 function updatePriority() {
@@ -141,7 +85,6 @@ function updatePriority() {
 function submitInteraction() {
     const workNote = document.getElementById("interaction__workNotes");
     const message = document.getElementById("interaction__Messages");
-    const workLogs = document.getElementById("workNotes__Logs");
     const messageLogs = document.getElementById("messages__Logs");
 
     const workContent = workNote.value.trim();
@@ -196,18 +139,5 @@ function submitInteraction() {
             messageLogs.appendChild(div);
             message.value = "";
             workNote.value = "";
-    }
-
-    function searchElement() {
-        const search = document.getElementById("searchBar__Input").value.toLowerCase().trim();
-        const inter = document.getElementById("interaction");
-
-        if (!search) return;
-
-        if ("interaction".startsWith(search) ||
-            "work note".startsWith(search) ||
-            "message".startsWith(search)) {
-            inter.style.display = "flex";
-        }
     }
 }

@@ -3,11 +3,11 @@
 body {
     display: flex;
     justify-content: center;
-    min-height: $site_minHeight;
-    background-color: $site_background;
-    color: $site_textcolor;
-    font-family: $font_family;
-    font-size: $global_font-size;
+    min-height: $site-minHeight;
+    background-color: $site-background;
+    color: $site-textcolor;
+    font-family: $font-family;
+    font-size: $global-font-size;
 }
 
 #container {
@@ -21,60 +21,46 @@ p {
 }
 
 h1 {
-    font-size: $h1_font-size;
+    font-size: $h1-font-size;
 }
 
 h2 {
-    font-size: $h2_font-size;
+    font-size: $h2-font-size;
 }
 
 h3 {
-    font-size: $h3_font-size;
+    font-size: $h3-font-size;
 }
 
 h4 {
-    font-size: $h4_font-size;
+    font-size: $h4-font-size;
 }
 
 li {
-    font-size: $li_font-size;
+    font-size: $li-font-size;
 }
 
 .btn {
-    background-color: $btn_bg;
-    color: $btn_text-color;
-    border-color: $btn_border-color;
-    border-radius: $btn_radious;
-    padding: 5px 5px;
-}
-
-input {
-    background-color: $input_bg;
-    color: $input_text-color;
-    border-color: $input_border-color;
-    border-radius: $input_radious;
-    padding: 5px 5px;
-}
-
-textarea {
-    background-color: $input_bg;
-    color: $input_text-color;
-    border-color: $input_border-color;
-    border-radius: $input_radious;
-    padding: 5px 5px;
-}
-
-select {
-    background-color: $input_bg;
-    color: $input_text-color;
-    border-color: $input_border-color;
-    border-radius: $input_radious;
+    background-color: $btn-bg;
+    color: $btn-text-color;
+    border-color: $btn-border-color;
+    border-radius: $btn-radius;
     padding: 5px 5px;
 }
 
 option {
-    background-color: $input_bg;
-    color: $input_text-color;
-    border-color: $input_border-color;
+    background-color: $input-bg;
+    color: $input-text-color;
+    border-color: $input-border-color;
     cursor: grab;
+}
+
+input,
+textarea,
+select {
+    background-color: $input-bg;
+    color: $input-text-color;
+    border-color: $input-border-color;
+    border-radius: $input-radius;
+    padding: 5px 5px;
 }

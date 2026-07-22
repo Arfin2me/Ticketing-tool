@@ -2,7 +2,7 @@
 
 #createCase {
     // Changed: stack the main workspace and interactive container vertically so the lower area stays visible.
-    display: $Hide_Eelements;
+    display: $Hide_Elements;
     height: 100%;
     flex-direction: row;
     flex-wrap: wrap;
@@ -11,15 +11,7 @@
 
 
 #interaction {
-    display: $Hide_Eelements;
-}
-
-#workspace__Nav {
-    // Changed: give the workspace navigation a stable vertical layout instead of only display:flex.
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    flex-shrink: 0;
+    display: $Hide_Elements;
 }
 
 #case__WorkedBefore {
@@ -54,40 +46,11 @@
     max-height: 700px;
 }
 
-#createCase__Details {
-    display: grid;
-    grid-template-rows: auto auto;
-    align-items:center;
-    min-width: 300px;
-    max-height: 700px;
-}
-
-#caller__Box {
-    display: grid;
-    grid-template-rows: auto auto;
-    align-items:center;
-    height: 200px;
-    min-width: 300px;
-}
-
-.createCase__Details--Items {
-    display: flex;
-    justify-content: space-between;
-}
-
+.createCase__Details--Items,
 .caller__Details--Items {
     display: flex;
     justify-content: space-between;
 }
-
-#case__Details {
-    display: grid;
-    grid-template-rows: auto auto;
-    align-items:center;
-    min-width: 300px;
-    height: 200px;
-}
-
 
 .case__Item {
     display: flex;
@@ -107,14 +70,7 @@
 #troubleshooting__Form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-#interactive__Area {
-    // Changed: let the interactive content use available space next to the workspace nav.
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 16px;
+    align-items: stretch;
 }
 
 #interaction {
@@ -124,7 +80,7 @@
 #interaction__Form {
     display: flex;
     flex-direction: column;
-    min-width: 90%;
+    min-width: 100%;
 }
 
 #interaction__Btn--Box {
@@ -133,10 +89,6 @@
     justify-content: flex-end;
     gap: 16px;
     margin-top: 16px;
-}
-
-#interaction__Area {
-    min-width: 400px;
 }
 
 #interaction__Logs {
@@ -152,14 +104,14 @@
     gap: 16px;
     min-width: 300px;
     max-width: 500px;
-    align-items: center;
+    align-items: stretch;
 }
 
 #interactive__Description--Box {
     display: flex;
     flex-direction: column;
     min-width: 300px;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 16px;
 }
 
@@ -209,7 +161,7 @@
     width: 100%;
     word-wrap: break-word;
     padding: 10px;
-    background-color: none;
+    background-color: transparent;
     border: 1px solid rgb(57, 136, 192);
     border-radius: 5px;
     margin-bottom: 10px;
@@ -219,7 +171,7 @@
     min-width: 100%;
     word-wrap: break-word;
     padding: 10px;
-    background-color: none;
+    background-color: transparent;
     border: 1px solid #f0f0f0;
     border-radius: 5px;
     margin-bottom: 10px;

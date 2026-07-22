@@ -47,8 +47,8 @@
           </div>
           <!-- Login inputs: username and password fields. -->
           <div id="login__Inputs">
-            <input id="login__userName" class="login__" type="text" placeholder="User Name">
-            <input id="login__Password" type="password" placeholder="Password">
+            <input id="login__userName" class="login" type="text" placeholder="User Name" name="login__userName">
+            <input id="login__Password" type="password" placeholder="Password" name="login__Password">
           </div>
           <!-- Login buttons: sign up, submit, and password reset actions. -->
           <div id="login__Btns">
@@ -70,10 +70,10 @@
   <div id="container__Body">
     <!-- Changed: create case screen ids/classes now match the visible Case wording. -->
     <!-- Create case screen: contains the full case form and interaction panels. -->
-    <div id="createCase">
+    <form id="createCase">
 
       <!-- Case details container: groups top action buttons, case fields, and caller info. -->
-      <div id="createCase__Container">
+      <section id="createCase__Container">
         <!-- Workspace actions: buttons for saving or changing case state. -->
 
         <div id="workspace__Actions">
@@ -93,8 +93,8 @@
             <span id="caseNumber__value">CS0000001</span>
           </li>
           <li class="createCase__Details--Items">
-            <span id="caseParent--Label">Parent Case:</span>
-            <input id="caseParent__Input" type="text" placeholder="Parent Case">
+            <span id="caseParent__Label">Parent Case:</span>
+            <input id="caseParent__Input" type="text" placeholder="Parent Case" name="caseParent__Input">
           </li>
           <li class="createCase__Details--Items">
             <span id="casePriority__Label">Priority</span>
@@ -102,7 +102,7 @@
           </li>
           <li class="createCase__Details--Items">
             <span id="caseUrgency__Label">Urgency</span>
-            <select id="caseUrgency__Options">
+            <select id="caseUrgency__Options" name="caseUrgency__Options">
               <option id="caseUrgency__Low--Option">Low</option>
               <option id="caseUrgency__Medium--Option">Medium</option>
               <option id="caseUrgency__High--Option">High</option>
@@ -110,7 +110,7 @@
           </li>
           <li class="createCase__Details--Items">
             <span id="caseImpact__Label">Impact</span>
-            <select id="caseImpact__Options">
+            <select id="caseImpact__Options" name="caseImpact__Options">
               <option id="caseImpact__Low--Option">Low</option>
               <option id="caseImpact__Medium--Option">Medium</option>
               <option id="caseImpact__High--Option">High</option>
@@ -119,96 +119,96 @@
         </ul>
 
         <!-- Caller container: visual/layout wrapper for the caller fields list. -->
-        <ul id="caller__Box">
-          <li class="caller__Details--Items">
+        <section id="caller__Box">
+          <div class="caller__Details--Items">
             <label for="caller__Name--input" id="caller__Name--label">Caller's Name</label>
-            <input id="caller__Name--input" type="text" placeholder="Caller's Name">
-          </li>
-          <li class="caller__Details--Items">
+            <input id="caller__Name--input" type="text" placeholder="Caller's Name" name="caller__Name">
+          </div>
+          <div class="caller__Details--Items">
             <label for="caller__ID--input" id="caller__ID--label">Caller's ID</label>
-            <input id="caller__ID--input" type="text" placeholder="Caller's ID">
-          </li>
-          <li class="caller__Details--Items">
+            <input id="caller__ID--input" type="text" placeholder="Caller's ID" name="caller__ID">
+          </div>
+          <div class="caller__Details--Items">
             <span id="caller__Vip">VIP</span>
-          </li>
-          <li class="caller__Details--Items">
+          </div>
+          <div class="caller__Details--Items">
             <label for="caller__Location--input" id="caller__Location--label">Location</label>
-            <input id="caller__Location--input" type="text" placeholder="Location">
-          </li>
-          <li class="caller__Details--Items">
+            <input id="caller__Location--input" type="text" placeholder="Location" name="caller__Location">
+          </div>
+          <div class="caller__Details--Items">
             <label for="caller__timeZone--input" id="caller__timeZone--label">Time Zone</label>
-            <input id="caller__timeZone--input" type="text" placeholder="Time Zone">
-          </li>
-          <li class="caller__Details--Items">
+            <input id="caller__timeZone--input" type="text" placeholder="Time Zone" name="caller__TimeZone">
+          </div>
+          <div class="caller__Details--Items">
             <label for="caller__CI--input" id="caller__CI--label">Configuration Item</label>
-            <input id="caller__CI--input" type="text" placeholder="Configuration Item">
-          </li>
-          <li class="caller__Details--Items">
+            <input id="caller__CI--input" type="text" placeholder="Configuration Item" name="caller__CI">
+          </div>
+          <div class="caller__Details--Items">
             <label for="caller__Type--input" id="caller__Type--label">Type</label>
-            <input id="caller__Type--input" type="text" placeholder="Type">
-          </li>
-          <li id="case__WorkedBefore" class="case__Item">
+            <input id="caller__Type--input" type="text" placeholder="Type" name="caller__Type">
+          </div>
+          <div id="case__WorkedBefore" class="case__Item">
             <!-- Changed: previous work ids make the yes/no buttons easier to understand. -->
             <span id="casePreviousWork__Label">Worked Before? </span>
             <div id="previousWork__Btns">
               <button id="casePreviousWork__YesBtn" class="btn" type="button">Yes</button>
               <button id="casePreviousWork__NoBtn" class="btn" type="button">No</button>
             </div>
-          </li>
-          <li class="case__Item">
+          </div>
+          <div class="case__Item">
             <!-- Changed: knowledge article ids no longer use the unclear KB abbreviation. -->
             <label for="caseKnowledgeArticle__Input" id="caseKnowledgeArticle__Label">Knowledge Article</label>
-            <input id="caseKnowledgeArticle__Input" type="text" placeholder="KB number">
-          </li>
-          <li class="case__Item">
+            <input id="caseKnowledgeArticle__Input" type="text" placeholder="KB number" name="caseKnowledgeArticle">
+          </div>
+          <div class="case__Item">
             <!-- Changed: related ticket ids now use full words instead of the rel abbreviation. -->
             <label for="caseRelatedTickets__Input" id="caseRelatedTickets__Label">Related Tickets</label>
-            <input id="caseRelatedTickets__Input" type="text" placeholder="Related Tickets">
-          </li>
-          <li class="case__Item">
+            <input id="caseRelatedTickets__Input" type="text" placeholder="Related Tickets" name="caseRelatedTickets">
+          </div>
+          <div class="case__Item">
             <!-- Changed: case assignment ids now clearly show these fields belong to the case assignment section. -->
-            <label for="caseAssignmentGroup__Input" id="caseAssignmentGroup__Label">Assignment Group</label>
-            <input id="caseAssignmentGroup__Assign" type="text" placeholder="Assignment Group">
-          </li>
-          <li class="case__Item">
+            <label for="caseAssignmentGroup__Assign" id="caseAssignmentGroup__Label">Assignment Group</label>
+            <input id="caseAssignmentGroup__Assign" type="text" placeholder="Assignment Group" name="caseAssignmentGroup">
+          </div>
+          <div class="case__Item">
             <!-- Changed: assignee ids describe the person assigned to the case. -->
             <label for="caseAssignee__Input" id="caseAssignee__Label">Assigned To</label>
-            <input id="caseAssignee__Input" type="text" placeholder="Assigned To">
-          </li>
-        </ul>
-      </div>
+            <input id="caseAssignee__Input" type="text" placeholder="Assigned To" name="caseAssignee">
+          </div>
+        </section>
+      </section>
       <!-- Interactive container: holds workspace navigation, troubleshooting, and interaction logs. -->
 
 
       <!-- Workspace fields container: holds description, assignment, knowledge, and related-ticket fields. -->
       <section id="troubleshooting">
-        <ul id="interactive__Description--Box">
-          <li id="shortDescription__Box" class="workspace__Item">
+        <section id="interactive__Description--Box">
+          <div id="shortDescription__Box" class="workspace__Item">
             <label for="shortDescription__Text" id="shortDescription__label">Short Description</label>
             <textarea id="shortDescription__Text" name="shortDescription__Text" rows="1" cols="60"></textarea>
-          </li>
-          <li id="description__Box" class="workspace__Item">
+          </div>
+          <div id="description__Box" class="workspace__Item">
             <label for="description__Text" id="description__Label">Description</label>
             <textarea id="description__Text" name="description" rows="5" cols="60"></textarea>
-          </li>
-        </ul>
+          </div>
+        </section>
         <div id="troubleshooting__Container">
           <!-- Workspace navigation: buttons for choosing the active lower workspace panel. -->
           <!-- Interactive area: contains troubleshooting notes and user interaction sections. -->
 
 
           <!-- Troubleshooting input box: form where troubleshooting notes are written. -->
-          <div id="troubleshooting__Box" class="workspace__Item">
-            <form id="troubleshooting__Form">
+          <section id="troubleshooting__Box" class="workspace__Item">
+            <div id="troubleshooting__Form">
               <div class="flex-left">
                 <label id="troubleshooting__Label" for="troubleshooting__Text">Troubleshooting</label>
               </div>
               <textarea id="troubleshooting__Text" name="troubleshooting__Text" rows="6" cols="60"></textarea>
               <div class="flex-right">
-                <button id="troubleshooting__Btn" class="btn" type="submit">Submit</button>
+                <button id="troubleshooting__Btn" class="btn" type="button">Submit</button>
               </div>
-            </form>
-          </div>
+            </div>
+          </section>
           <!-- Troubleshooting logs: list where submitted troubleshooting notes appear. -->
           <div id="troubleshooting__Logs">
             <div id="troubleshooting__Header--Box">
@@ -220,15 +220,15 @@
         </div>
       </section>
       <div id="interaction__Box">
-        <form id="interaction__Form">
+        <section id="interaction__Form">
           <label for="interaction__workNotes" id="interaction__workNotes--Label">Comment</label>
           <textarea id="interaction__workNotes" name="interaction__workNotes" cols="30" rows="4"></textarea>
           <label for="interaction__Messages" id="interaction__Messages--Label">Message</label>
           <textarea id="interaction__Messages" name="interaction__Messages" cols="30" rows="4"></textarea>
           <div id="interaction__Btn--Box">
-            <button id="interaction__Submit--Btn" class="btn" type="submit">Submit</button>
+            <button id="interaction__Submit--Btn" class="btn" type="button">Submit</button>
           </div>
-        </form>
+        </section>
 
         <!-- Interaction logs: contains both internal comments and external messages. -->
         <div id="interaction__Logs">
@@ -243,7 +243,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </form>
   </div>
   <div id="workspace__Nav--Container">
     <button id="nav__Btn--Troubleshooting" class="btn" type="button">Troubleshooting</button>

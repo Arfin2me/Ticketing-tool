@@ -25,12 +25,12 @@ function addChangeListener(id, handler) {
     }
 }
 
-addClickListener("nav__Btn", showContent);
+addClickListener("login__Btn", showContent);
 // Changed: event listeners now target the clearer case-based ids used in the HTML.
 addClickListener("nav__Btn--createCase", showCreateCase);
-stopReload("troubleshooting__Form", addTroubleshootingLog);
+addClickListener("troubleshooting__Btn", addTroubleshootingLog);
 
-stopReload("interaction__Form", submitInteraction);
+addClickListener("interaction__Submit--Btn", submitInteraction);
 addChangeListener("caseUrgency__Options", updatePriority);
 addChangeListener("caseImpact__Options", updatePriority);
 updatePriority();
