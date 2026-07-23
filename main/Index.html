@@ -129,9 +129,6 @@
             <input id="caller__ID--input" type="text" placeholder="Caller's ID" name="caller__ID">
           </div>
           <div class="caller__Details--Items">
-            <span id="caller__Vip">VIP</span>
-          </div>
-          <div class="caller__Details--Items">
             <label for="caller__Location--input" id="caller__Location--label">Location</label>
             <input id="caller__Location--input" type="text" placeholder="Location" name="caller__Location">
           </div>
@@ -145,7 +142,11 @@
           </div>
           <div class="caller__Details--Items">
             <label for="caller__Type--input" id="caller__Type--label">Type</label>
-            <input id="caller__Type--input" type="text" placeholder="Type" name="caller__Type">
+            <select id="caller__Type--input">
+              <option value="Hardware" id="type__Hardware">Hardware</option>
+              <option value="Software" id="type__Software">Software</option>
+              <option value="Policy" id="type__Software">Policy</option>
+            </select>
           </div>
           <div id="case__WorkedBefore" class="case__Item">
             <!-- Changed: previous work ids make the yes/no buttons easier to understand. -->
@@ -168,7 +169,8 @@
           <div class="case__Item">
             <!-- Changed: case assignment ids now clearly show these fields belong to the case assignment section. -->
             <label for="caseAssignmentGroup__Assign" id="caseAssignmentGroup__Label">Assignment Group</label>
-            <input id="caseAssignmentGroup__Assign" type="text" placeholder="Assignment Group" name="caseAssignmentGroup">
+            <input id="caseAssignmentGroup__Assign" type="text" placeholder="Assignment Group"
+              name="caseAssignmentGroup">
           </div>
           <div class="case__Item">
             <!-- Changed: assignee ids describe the person assigned to the case. -->
@@ -243,16 +245,17 @@
           </div>
         </div>
       </div>
+      <div id="workspace__Nav--Container">
+        <button id="nav__Btn--Troubleshooting" class="btn" type="button">Troubleshooting</button>
+        <button id="nav__Btn--Chat" class="btn" type="button">Chat</button>
+        <button id="nav__Btn--CallerInfo" class="btn" type="button">Caller Info</button>
+        <button id="nav__Btn--Attachments" class="btn" type="button">Attachments</button>
+        <button id="nav__Btn--Knowledge" class="btn" type="button">Knowledge</button>
+        <button id="nav__Btn--RelatedItems" class="btn" type="button">Related Records</button>
+      </div>
     </form>
   </div>
-  <div id="workspace__Nav--Container">
-    <button id="nav__Btn--Troubleshooting" class="btn" type="button">Troubleshooting</button>
-    <button id="nav__Btn--Chat" class="btn" type="button">Chat</button>
-    <button id="nav__Btn--CallerInfo" class="btn" type="button">Caller Info</button>
-    <button id="nav__Btn--Attachments" class="btn" type="button">Attachments</button>
-    <button id="nav__Btn--Knowledge" class="btn" type="button">Knowledge</button>
-    <button id="nav__Btn--RelatedItems" class="btn" type="button">Related Records</button>
-  </div>
+
 
   <!-- Changed: removed the leading space from the script path. -->
   <script src="../JavaScript/main.js" defer></script>

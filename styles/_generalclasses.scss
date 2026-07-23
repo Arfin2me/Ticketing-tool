@@ -29,7 +29,20 @@
     flex-direction: column-reverse;
 }
 
+.flex {
+    display: flex;
+}
+
 .grid {
     display: grid;
 }
 
+.disappear {
+    display: none;
+}
+.activate {
+    background-color: purple;
+}
+.deactivate {
+    background-color: transparent;
+}

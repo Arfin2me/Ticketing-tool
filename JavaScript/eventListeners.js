@@ -34,3 +34,5 @@ addClickListener("interaction__Submit--Btn", submitInteraction);
 addChangeListener("caseUrgency__Options", updatePriority);
 addChangeListener("caseImpact__Options", updatePriority);
 updatePriority();
+addClickListener("casePreviousWork__YesBtn", workedBefore);
+addClickListener("casePreviousWork__NoBtn", workedBefore);

@@ -64,3 +64,8 @@ select {
     border-radius: $input-radius;
     padding: 5px 5px;
 }
+
+select {
+    min-width: 100px;
+    margin: 4px 0;
+}

@@ -5,7 +5,7 @@ function showContent() {
     const welcomeStyle = document.getElementById("login__Header--Text").style;
 
     if (credits[0].value === "" && credits[1].value === "") {
-        menuStyle.display = "flex";
+        menuStyle.display = "grid";
         formStyle.display = "none";
         welcomeStyle.display = "none";
     }
@@ -21,14 +21,8 @@ function showCreateCase() {
     createCaseStyle.display = (
         createCaseStyle.display === "none" ||
         createCaseStyle.display === ""
-    ) ? "flex" : "none";
+    ) ? "grid" : "none";
     createCaseBtn.textContent = isOpening ? "Cancel" : "Create New Case";
-
-    menuItems.forEach(menu => {
-        if (!menu.contains(createCaseBtn)) {
-            menu.style.display = isOpening ? "none" : "flex";
-        }
-    });
 }
 
 function addTroubleshootingLog() {
@@ -139,5 +133,18 @@ function submitInteraction() {
             messageLogs.appendChild(div);
             message.value = "";
             workNote.value = "";
+    }
+}
+
+function workedBefore() {
+    const yesBtn = document.getElementById("casePreviousWork__YesBtn");
+    const noBtn = document.getElementById("casePreviousWork__NoBtn");
+    const clicked = event.target;
+    if (clicked === yesBtn) {
+        noBtn.classList.toggle("disappear");
+        yesBtn.classList.toggle("activate");
+    } else if (clicked === noBtn) {
+        yesBtn.classList.toggle("disappear");
+        noBtn.classList.toggle("activate");
     }
 }
