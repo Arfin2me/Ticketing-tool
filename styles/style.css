@@ -86,7 +86,7 @@ li {
   background-color: black;
   color: rgb(211, 225, 188);
   border-color: rgb(57, 136, 192);
-  border-radius: 10%;
+  border-radius: 2%;
   padding: 5px 5px;
 }
 
@@ -103,7 +103,7 @@ select {
   background-color: black;
   color: rgb(211, 225, 188);
   border-color: rgb(57, 136, 192);
-  border-radius: 4%;
+  border-radius: 10px;
   padding: 5px 5px;
 }
 
@@ -196,7 +196,7 @@ select {
 #createCase {
   display: grid;
   height: 100%;
-  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-columns: 1fr 30% 30%;
 }
 
 #interaction {
@@ -208,16 +208,20 @@ select {
   margin-bottom: 8px;
 }
 
+#caller__Box {
+  max-width: 100%;
+  min-width: 80%;
+}
+
 #createCase__Container {
   display: flex;
   flex-direction: column;
-  margin-left: 1%;
   height: 700px;
-  min-width: 380px;
-  max-width: 500px;
+  min-width: 450px;
+  max-width: 550px;
   border-radius: 10%;
-  padding: 0 10%;
-  align-items: space-between;
+  padding: 0 5%;
+  align-items: space-around;
 }
 
 #workspace__Actions {
@@ -231,7 +235,6 @@ select {
   grid-template-rows: auto auto;
   align-items: center;
   min-width: 300px;
-  max-width: 500px;
   max-height: 700px;
 }
 
@@ -251,7 +254,7 @@ select {
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  min-width: 300px;
+  min-width: 200px;
   height: 700px;
 }
 
@@ -262,7 +265,7 @@ select {
 }
 
 #interaction {
-  min-width: 400px;
+  min-width: 200px;
 }
 
 #interaction__Form {
@@ -281,7 +284,7 @@ select {
 
 #interaction__Logs {
   display: flex;
-  min-width: 300px;
+  min-width: 200px;
   flex-direction: row;
   gap: 16px;
 }
@@ -290,14 +293,16 @@ select {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  min-width: 300px;
+  min-width: 200px;
+  max-width: 500px;
   align-items: stretch;
+  padding-right: 5%;
 }
 
 #interactive__Description--Box {
   display: flex;
   flex-direction: column;
-  min-width: 300px;
+  min-width: 200px;
   align-items: stretch;
   gap: 16px;
 }
@@ -305,7 +310,7 @@ select {
 #troubleshooting__Box {
   display: flex;
   flex-direction: column;
-  min-width: 400px;
+  min-width: 200px;
   gap: 16px;
 }
 
@@ -318,7 +323,7 @@ select {
   display: flex;
   flex-direction: column;
   position: fixed;
-  right: 2%;
+  right: 1%;
   top: 5%;
 }
 
@@ -333,16 +338,15 @@ select {
 #messages__Logs {
   display: flex;
   flex-direction: column-reverse;
-  align-items: center;
+  align-items: stretch;
 }
 
 #interaction__Box {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   gap: 16px;
-  min-width: 400px;
-  padding-left: 3%;
+  min-width: 200px;
 }
 
 .logs {
@@ -353,7 +357,7 @@ select {
   border: 1px solid rgb(57, 136, 192);
   border-radius: 5px;
   margin-bottom: 10px;
-  min-width: 400px;
+  min-width: 200px;
 }
 
 .comments {
@@ -364,16 +368,16 @@ select {
   border: 1px solid #f0f0f0;
   border-radius: 5px;
   margin-bottom: 10px;
-  min-width: 400px;
+  min-width: 200px;
 }
 
 #troubleshooting__Logs {
-  min-width: 400px;
+  min-width: 200px;
 }
 
 #troubleshooting__Header--Box, #message__Header--Box {
   display: flex;
-  min-width: 400px;
+  min-width: 200px;
   justify-content: center;
 }
 
