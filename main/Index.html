@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<!-- Changed: the root element must be <html>, and lang belongs on this element. -->
 <html lang="en">
 
 <head>
-  <!-- Changed: charset and viewport are separate meta tags for valid document metadata. -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Learning Project</title>
+  <title>Ticketing tool</title>
   <link rel="stylesheet" href="../styles/style.css">
 </head>
 
@@ -14,7 +12,6 @@
   <div id="nav__Menu">
     <!-- Navigation dropdown/list: groups all main menu buttons. -->
     <div id="nav__Dropbox">
-      <!-- Changed: navigation ids now use readable case names instead of old short ticket abbreviations. -->
       <button id="nav__Btn--createCase" class="btn" type="button">Create New Case</button>
       <button id="nav__Btn--allCases" class="btn" type="button">All Cases</button>
       <button id="nav__Btn--allRequests" class="btn" type="button">All Requests</button>
@@ -84,7 +81,6 @@
         </div>
         <ul id="createCase__Box">
           <li class="createCase__Details--Items">
-            <!-- Changed: case field ids use full words instead of the old short prefix. -->
             <span id="caseState__Label">Case State:</span>
             <span id="caseState__value">New</span>
           </li>
@@ -149,7 +145,6 @@
             </select>
           </div>
           <div id="case__WorkedBefore" class="case__Item">
-            <!-- Changed: previous work ids make the yes/no buttons easier to understand. -->
             <span id="casePreviousWork__Label">Worked Before? </span>
             <div id="previousWork__Btns">
               <button id="casePreviousWork__YesBtn" class="btn" type="button">Yes</button>
@@ -157,23 +152,19 @@
             </div>
           </div>
           <div class="case__Item">
-            <!-- Changed: knowledge article ids no longer use the unclear KB abbreviation. -->
             <label for="caseKnowledgeArticle__Input" id="caseKnowledgeArticle__Label">Knowledge Article</label>
             <input id="caseKnowledgeArticle__Input" type="text" placeholder="KB number" name="caseKnowledgeArticle">
           </div>
           <div class="case__Item">
-            <!-- Changed: related ticket ids now use full words instead of the rel abbreviation. -->
             <label for="caseRelatedTickets__Input" id="caseRelatedTickets__Label">Related Tickets</label>
             <input id="caseRelatedTickets__Input" type="text" placeholder="Related Tickets" name="caseRelatedTickets">
           </div>
           <div class="case__Item">
-            <!-- Changed: case assignment ids now clearly show these fields belong to the case assignment section. -->
             <label for="caseAssignmentGroup__Assign" id="caseAssignmentGroup__Label">Assignment Group</label>
             <input id="caseAssignmentGroup__Assign" type="text" placeholder="Assignment Group"
               name="caseAssignmentGroup">
           </div>
           <div class="case__Item">
-            <!-- Changed: assignee ids describe the person assigned to the case. -->
             <label for="caseAssignee__Input" id="caseAssignee__Label">Assigned To</label>
             <input id="caseAssignee__Input" type="text" placeholder="Assigned To" name="caseAssignee">
           </div>
@@ -239,7 +230,6 @@
             <div id="message__Header--Box">
               <h3 id="messages__Header">Interaction Logs</h3>
             </div>
-            <!-- Changed: removed the extra quote from aria-live. -->
             <ul id="messages__Logs" aria-live="polite">
             </ul>
           </div>
@@ -256,8 +246,6 @@
     </form>
   </div>
 
-
-  <!-- Changed: removed the leading space from the script path. -->
   <script src="../JavaScript/main.js" defer></script>
   <script src="../JavaScript/eventListeners.js" defer></script>
 </body>

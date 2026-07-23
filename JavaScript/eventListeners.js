@@ -26,7 +26,6 @@ function addChangeListener(id, handler) {
 }
 
 addClickListener("login__Btn", showContent);
-// Changed: event listeners now target the clearer case-based ids used in the HTML.
 addClickListener("nav__Btn--createCase", showCreateCase);
 addClickListener("troubleshooting__Btn", addTroubleshootingLog);
 

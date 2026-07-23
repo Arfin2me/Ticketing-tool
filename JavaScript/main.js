@@ -11,7 +11,6 @@ function showContent() {
     }
 }
 
-// Changed: function and variable names now describe cases instead of the old ticket term.
 function showCreateCase() {
     const createCaseStyle = document.getElementById("createCase").style;
     const createCaseBtn = document.getElementById("nav__Btn--createCase");
@@ -48,7 +47,6 @@ function addTroubleshootingLog() {
 }
 
 function updatePriority() {
-    // Changed: priority calculation now uses case field ids instead of old short ids.
     const priority = document.getElementById("casePriority__Value");
     const urgency = document.getElementById("caseUrgency__Options").value;
     const impact = document.getElementById("caseImpact__Options").value;
