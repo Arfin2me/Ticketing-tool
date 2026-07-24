@@ -1,4 +1,4 @@
-@use "variables" as *;
+@use "variables"as *;
 
 #createCase {
     // Changed: stack the main workspace and interactive container vertically so the lower area stays visible.
@@ -7,6 +7,13 @@
     grid-template-columns: 1fr 30% 30%;
 }
 
+@media (max-width: 1480px) {
+    #createCase {
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+}
 
 
 #interaction {
@@ -43,7 +50,7 @@
 #createCase__Box {
     display: grid;
     grid-template-rows: auto auto;
-    align-items:center;
+    align-items: center;
     min-width: 300px;
     max-height: 700px;
 }
@@ -135,6 +142,7 @@
     right: 1%;
     top: 5%;
 }
+
 #messages {
     display: flex;
     flex-direction: column;
@@ -157,7 +165,7 @@
     min-width: 200px;
 }
 
-.logs  {
+.logs {
     width: 100%;
     word-wrap: break-word;
     padding: 10px;
@@ -183,13 +191,15 @@
     min-width: 200px;
 }
 
-#troubleshooting__Header--Box, #message__Header--Box {
+#troubleshooting__Header--Box,
+#message__Header--Box {
     display: flex;
     min-width: 200px;
     justify-content: center;
 }
 
-#description__Box, #shortDescription__Box {
+#description__Box,
+#shortDescription__Box {
     display: flex;
     flex-direction: column;
 }
@@ -201,6 +211,7 @@ input[type="checkbox"] {
     border: 2px solid $btn-border-color;
     border-radius: 4px;
 }
+
 input[type="checkbox"]:checked {
     background: rgb(176, 20, 20);
     border-color: $input-text-color;

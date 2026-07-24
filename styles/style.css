@@ -199,6 +199,13 @@ select {
   grid-template-columns: 1fr 30% 30%;
 }
 
+@media (max-width: 1480px) {
+  #createCase {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+}
 #interaction {
   display: flex;
 }
@@ -375,13 +382,15 @@ select {
   min-width: 200px;
 }
 
-#troubleshooting__Header--Box, #message__Header--Box {
+#troubleshooting__Header--Box,
+#message__Header--Box {
   display: flex;
   min-width: 200px;
   justify-content: center;
 }
 
-#description__Box, #shortDescription__Box {
+#description__Box,
+#shortDescription__Box {
   display: flex;
   flex-direction: column;
 }
